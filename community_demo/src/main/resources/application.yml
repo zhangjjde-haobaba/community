@@ -1,0 +1,37 @@
+server:
+  port: 8181
+
+spring:
+  application: community
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/community?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  redis:
+    database: 1
+    host: 127.0.0.1
+    port: 6379
+    password:
+jwt:
+  secret: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4K67DMlSPXbgG0MPp0gH
+  expire: 86400000
+  #  expire: 10000
+  subject: door
+upload:
+  face: /Users/jiangyiwei/myVueProject/community/upload/face/
+  excel: /Users/jiangyiwei/myVueProject/community/upload/excel/
+  urlPrefix: http://localhost:8181/
+plateocr:
+  secretId: AKID42ua1E0e5Sk3Z6TcaXR6hCd5MTO7fzui
+  secretKey: mKjz2sjNr9GE3hJky1sgWBdvCbzHlNvo
+  serverIp: iai.tencentcloudapi.com
+  area: ap-guangzhou
+  groupId: testGroup
+  personIdPre: Test_
+  nonceStr: 123456
+  used: true
+  passPercent: 80
